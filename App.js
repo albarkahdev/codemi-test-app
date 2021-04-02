@@ -1,15 +1,2 @@
-import 'react-native-gesture-handler';
-
-import type {Node} from 'react';
-import React from 'react';
-import {
-  View,
-} from 'react-native';
-
-const App = () => {
-  return (
-    <View />
-  );
-};
-
+import App from './src/app/app.component';
 export default App;
