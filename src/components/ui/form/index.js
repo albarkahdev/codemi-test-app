@@ -1,5 +1,3 @@
 import ThemedTextInput from './textInput';
 
-export {
-  ThemedTextInput,
-};
+export {ThemedTextInput};

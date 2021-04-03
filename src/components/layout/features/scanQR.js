@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {UIButtonIcon, UIContainer} from '../../ui';
 
 import {AssetIconsPack} from '../../../app/app-icons-pack';
+import PropTypes from 'prop-types';
 import Scanner from './scanner';
 
 const ScanQR = ({backToHome}) => {
@@ -28,6 +29,10 @@ const ScanQR = ({backToHome}) => {
       />
     </UIContainer>
   );
+};
+
+ScanQR.propTypes = {
+  backToHome: PropTypes.func.isRequired,
 };
 
 export default ScanQR;

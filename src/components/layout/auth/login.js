@@ -7,6 +7,8 @@ import {
   UITypography,
 } from '../../ui';
 
+import PropTypes from 'prop-types';
+
 const Login = ({loading, onLogin}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -52,6 +54,11 @@ const Login = ({loading, onLogin}) => {
       </UIColumn>
     </UIContainer>
   );
+};
+
+Login.propTypes = {
+  onLogin: PropTypes.func.isRequired,
+  loading: PropTypes.bool,
 };
 
 export default Login;

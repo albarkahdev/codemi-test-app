@@ -4,9 +4,9 @@ import {setAlign, setJustify, setMargin} from '../global-func';
 
 import PropTypes from 'prop-types';
 
-const ThemedRow = (props) => {
+const ThemedRow = props => {
   const {children, align, justify, flex, style} = props;
-  
+
   return (
     <View
       {...props}

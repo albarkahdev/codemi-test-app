@@ -1,6 +1,7 @@
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
 
 import ModalQR from './modalQR';
+import PropTypes from 'prop-types';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import React from 'react';
 
@@ -96,5 +97,13 @@ const styles = StyleSheet.create({
     borderColor: '#22FF7A',
   },
 });
+
+Scanner.propTypes = {
+  data: PropTypes.string.isRequired,
+  showModal: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  loading: PropTypes.bool,
+  style: PropTypes.object,
+};
 
 export default Scanner;

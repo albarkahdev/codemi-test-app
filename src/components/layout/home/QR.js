@@ -1,7 +1,8 @@
 import {Image, StyleSheet} from 'react-native';
+import React, {memo} from 'react';
 import {UIColumn, UITypography} from '../../ui';
 
-import React from 'react';
+import PropTypes from 'prop-types';
 import {URL_GOOGLE_AP_QR_CODE} from '../../../constants/api';
 import {setColor} from '../../ui/global-func';
 import {width} from '../../../constants/dimensions';
@@ -38,4 +39,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export default QR;
+QR.propTypes = {
+  username: PropTypes.string.isRequired,
+};
+
+export default memo(QR);

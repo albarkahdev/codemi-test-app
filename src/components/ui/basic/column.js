@@ -4,7 +4,7 @@ import {setAlign, setJustify, setMargin} from '../global-func';
 
 import PropTypes from 'prop-types';
 
-const ThemedColumn = (props) => {
+const ThemedColumn = props => {
   const {children, flex, align, justify, style} = props;
 
   return (

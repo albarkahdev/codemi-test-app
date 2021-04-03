@@ -1,6 +1,7 @@
 import {UIButtonIcon, UIColumn, UIContainer} from '../../ui';
 
 import {AssetIconsPack} from '../../../app/app-icons-pack';
+import PropTypes from 'prop-types';
 import QR from './QR';
 import React from 'react';
 import {setColor} from '../../ui/global-func';
@@ -23,6 +24,12 @@ const Home = ({username, gotoScanQR, onLogout}) => {
       />
     </UIContainer>
   );
+};
+
+Home.propTypes = {
+  username: PropTypes.string.isRequired,
+  gotoScanQR: PropTypes.func.isRequired,
+  onLogout: PropTypes.func.isRequired,
 };
 
 export default Home;

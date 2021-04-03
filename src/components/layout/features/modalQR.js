@@ -1,8 +1,9 @@
 import {Modal, StyleSheet} from 'react-native';
+import React, {memo} from 'react';
 import {UIColumn, UIContainer, UITouchable, UITypography} from '../../ui';
 
+import PropTypes from 'prop-types';
 import QR from '../home/QR';
-import React from 'react';
 import {height} from '../../../constants/dimensions';
 import {setColor} from '../../ui/global-func';
 
@@ -40,4 +41,10 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ModalQR;
+ModalQR.propTypes = {
+  visible: PropTypes.bool.isRequired,
+  data: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
+};
+
+export default memo(ModalQR);
