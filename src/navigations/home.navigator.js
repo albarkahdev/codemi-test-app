@@ -1,4 +1,5 @@
 import HomeScreen from '../screens/home';
+import React from 'react';
 import ScanQRScreen from '../screens/features/scanQR';
 import {animationSlide} from './animation';
 import {createStackNavigator} from '@react-navigation/stack';

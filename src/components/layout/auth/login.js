@@ -11,10 +11,13 @@ import React from 'react';
 const Login = () => {
   return (
     <UIContainer flex={1} justify="center" align="center">
-      <UIColumn bot={14}>
-        <UITypography size={20} type="bold">
-          Codemi Test Apps
-        </UITypography>
+      <UIColumn bot={20}>
+        <UITypography
+          size={30}
+          lineHeight={30}
+          type="bold"
+          title="Codemi Test Apps"
+        />
       </UIColumn>
       <UIColumn width="100%">
         <UITextInput

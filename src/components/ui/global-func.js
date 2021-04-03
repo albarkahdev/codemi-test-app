@@ -6,6 +6,8 @@ const setColor = color => {
       return '#48B927';
     case 'primary':
       return 'rgb(64, 179, 79)';
+    case 'primary-200':
+      return 'rgba(64, 179, 79, 0.2)';
     case 'red':
       return '#FF0000';
     case 'grey':

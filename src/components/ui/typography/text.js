@@ -6,7 +6,7 @@ import {Text} from 'react-native';
 
 const FONT_BASE = 14;
 
-const ThemedTypography = (props) => {
+const ThemedTypography = props => {
   const {
     title,
     size,
@@ -52,11 +52,7 @@ ThemedTypography.propTypes = {
   children: PropTypes.node,
   textAlign: PropTypes.string,
   textDecorationLine: PropTypes.string,
-  type: PropTypes.oneOf([
-    'bold',
-    'semi-bold',
-    'normal',
-  ]),
+  type: PropTypes.oneOf(['bold', 'semi-bold', 'normal']),
   color: PropTypes.oneOf([
     'white',
     'primary',
