@@ -7,8 +7,7 @@
 
 ### Running on iOS
 
-- `cd ios && pod install && cd ..` - to install pods
-- `react-native run-ios` - to run the app
+Currently, there is still an error in the ios module, please try the android version
 
 ### Running on Android
 
