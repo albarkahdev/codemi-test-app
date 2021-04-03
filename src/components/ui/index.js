@@ -1,3 +1,4 @@
+import {ThemedButton, ThemedButtonIcon} from './button';
 import {
   ThemedColumn,
   ThemedContainer,
@@ -6,8 +7,6 @@ import {
 } from './basic';
 
 import React from 'react';
-import {ThemedButton} from './button';
-import {ThemedProdukPulsa} from './card';
 import {ThemedTextInput} from './form';
 import {ThemedTypography} from './typography';
 
@@ -25,3 +24,4 @@ export const UITextInput = props => <ThemedTextInput {...props} />;
 
 //button
 export const UIButton = props => <ThemedButton {...props} />;
+export const UIButtonIcon = props => <ThemedButtonIcon {...props} />;

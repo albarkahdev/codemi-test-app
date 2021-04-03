@@ -1,9 +1,10 @@
 import {Image, StyleSheet} from 'react-native';
-import {UIRow, UITouchable, UITypography} from '../../ui';
+import React, {memo} from 'react';
+import {UIRow, UITouchable, UITypography} from '../';
 
-import React from 'react';
+import PropTypes from 'prop-types';
 
-const ButtonIcon = ({icon, title}) => {
+const ThemedButtonIcon = ({icon, title}) => {
   return (
     <UITouchable>
       <UIRow width="100%" justify="center" align="center">
@@ -21,4 +22,9 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ButtonIcon;
+ThemedButtonIcon.propTypes = {
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.number.isRequired,
+};
+
+export default memo(ThemedButtonIcon);

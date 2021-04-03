@@ -21,9 +21,9 @@ const ThemedButton = props => {
     idTimeOut = setTimeout(() => {
       setProcessing(false);
     }, 500);
-    return () => idTimeOut && clearTimeout(idTimeOut);
-
     onPress && onPress();
+
+    return () => idTimeOut && clearTimeout(idTimeOut);
   };
 
   return (

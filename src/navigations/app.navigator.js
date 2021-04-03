@@ -40,7 +40,7 @@ function AppNavigator({user, requestLogout}) {
   );
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   user: state.user,
 });
 

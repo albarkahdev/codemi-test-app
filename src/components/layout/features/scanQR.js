@@ -1,10 +1,16 @@
-import React from 'react';
-import { View } from 'react-native';
+import {UIButtonIcon, UIContainer} from '../../ui';
 
-// import { Container } from './styles';
+import {AssetIconsPack} from '../../../app/app-icons-pack';
+import React from 'react';
+import Scanner from './scanner';
 
 const ScanQR = () => {
-  return <View />;
-}
+  return (
+    <UIContainer noPaddingHorizontal flex={1}>
+      <Scanner />
+      <UIButtonIcon title="Back to your QR code" icon={AssetIconsPack.qr} />
+    </UIContainer>
+  );
+};
 
 export default ScanQR;

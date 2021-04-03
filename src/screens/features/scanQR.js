@@ -1,10 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
-
-// import { Container } from './styles';
+import ScanQRContent from '../../components/layout/features/scanQR';
 
 const ScanQR = () => {
-  return <View />;
-}
+  return <ScanQRContent />;
+};
 
 export default ScanQR;

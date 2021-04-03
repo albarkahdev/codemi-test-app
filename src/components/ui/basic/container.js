@@ -4,14 +4,14 @@ import {setAlign, setJustify, setMargin} from '../global-func';
 
 import PropTypes from 'prop-types';
 
-const ThemedContainer = (props) => {
-  const {children, align, justify, flex, style} = props;
+const ThemedContainer = props => {
+  const {children, noPaddingHorizontal, align, justify, flex, style} = props;
   return (
     <View
       {...props}
       style={[
         style,
-        styles.container,
+        !noPaddingHorizontal && styles.container,
         setMargin(props),
         {
           alignItems: setAlign(align),
