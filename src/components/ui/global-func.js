@@ -22,6 +22,8 @@ const setColor = color => {
       return '#DDDDDD';
     case 'black-EEE':
       return '#EEEEEE';
+    case 'black-400':
+      return 'rgba(0, 0, 0, 0.4)';
     default:
       return '#333333';
   }

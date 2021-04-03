@@ -1,44 +1,48 @@
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
 
+import ModalQR from './modalQR';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import React from 'react';
 
 const Scanner = props => {
-  const {style, loading} = props;
+  const {style, data, loading, showModal, onClose} = props;
   return (
     <View style={[style, styles.container]}>
-      <QRCodeScanner
-        {...props}
-        reactivate={true}
-        showMarker={true}
-        reactivateTimeout={3000}
-        customMarker={
-          <View>
-            {loading ? (
-              <ActivityIndicator />
-            ) : (
-              <View style={styles.qrStyle}>
-                <View style={[styles.row, {flex: 1}]}>
-                  <View style={styles.flex}>
-                    <View style={styles.qrStyleTopLeft} />
+      <ModalQR data={data} visible={showModal} onClose={onClose} />
+      {!showModal && (
+        <QRCodeScanner
+          {...props}
+          reactivate={true}
+          showMarker={true}
+          reactivateTimeout={3000}
+          customMarker={
+            <View>
+              {loading ? (
+                <ActivityIndicator />
+              ) : (
+                <View style={styles.qrStyle}>
+                  <View style={[styles.row, styles.flex]}>
+                    <View style={styles.flex}>
+                      <View style={styles.qrStyleTopLeft} />
+                    </View>
+                    <View style={styles.flex}>
+                      <View style={styles.qrStyleTopRight} />
+                    </View>
                   </View>
-                  <View style={styles.flex}>
-                    <View style={styles.qrStyleTopRight} />
+                  <View style={styles.row}>
+                    <View style={styles.flex}>
+                      <View style={styles.qrStyleBotLeft} />
+                    </View>
+                    <View style={styles.flex}>
+                      <View style={styles.qrStyleBotRight} />
+                    </View>
                   </View>
                 </View>
-                <View style={styles.row}>
-                  <View style={styles.flex}>
-                    <View style={styles.qrStyleBotLeft} />
-                  </View>
-                  <View style={styles.flex}>
-                    <View style={styles.qrStyleBotRight} />
-                  </View>
-                </View>
-              </View>
-            )}
-          </View>
-        }
-      />
+              )}
+            </View>
+          }
+        />
+      )}
     </View>
   );
 };

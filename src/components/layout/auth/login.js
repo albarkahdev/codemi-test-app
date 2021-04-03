@@ -26,7 +26,7 @@ const Login = ({loading, onLogin}) => {
       <UIColumn width="100%">
         <UITextInput
           bot={10}
-          placeholder="username"
+          placeholder="Username"
           autoCapitalize="none"
           onChangeText={val => setUsername(val)}
           value={username}
@@ -34,7 +34,7 @@ const Login = ({loading, onLogin}) => {
         />
         <UITextInput
           bot={16}
-          placeholder="password"
+          placeholder="Password"
           autoCapitalize="none"
           secureTextEntry
           onChangeText={val => setPassword(val)}
