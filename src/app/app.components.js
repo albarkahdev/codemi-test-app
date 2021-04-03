@@ -1,10 +1,10 @@
-import {Linking, SafeAreaView, StatusBar, StyleSheet} from 'react-native';
-import React, {useEffect, useState} from 'react';
-import {persistor, store} from 'reduxjs/store';
+import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
+import {persistor, store} from '../reduxjs/store';
 
-import AppNavigator from 'navigations/app.navigator';
+import AppNavigator from '../navigations/app.navigator';
 import {PersistGate} from 'redux-persist/integration/react';
 import {Provider} from 'react-redux';
+import React from 'react';
 
 const App = () => {
   return (
@@ -13,9 +13,9 @@ const App = () => {
         <SafeAreaView style={styles.wrapper}>
           <StatusBar
             barStyle="dark-content"
-            backgroundColor={'rgb(64,179,79, 0.2)'}
+            backgroundColor={'rgba(64, 179, 79, 0.2)'}
           />
-            <AppNavigator />
+          <AppNavigator />
         </SafeAreaView>
       </PersistGate>
     </Provider>

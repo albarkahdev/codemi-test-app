@@ -15,7 +15,6 @@ let middleware = [];
 
 export const store = createStore(
   persistedReducer,
-  composeEnhancers(applyMiddleware(...middleware)),
 );
 
 export const persistor = persistStore(store);
