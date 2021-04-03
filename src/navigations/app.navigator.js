@@ -1,15 +1,9 @@
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
-import {LogBox, YellowBox} from 'react-native';
 import React, {useEffect, useState} from 'react';
 
 import {AuthNavigator} from './auth.navigator';
 import HomeNavigator from './home.navigator';
 import {connect} from 'react-redux';
-
-// LogBox.ignoreAllLogs();
-// YellowBox.ignoreWarnings([
-//   'Non-serializable values were found in the navigation state',
-// ]);
 
 const navigatorTheme = {
   ...DefaultTheme,

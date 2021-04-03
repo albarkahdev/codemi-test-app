@@ -4,21 +4,24 @@ import PropTypes from 'prop-types';
 import {TouchableOpacity} from 'react-native';
 import {setMargin} from '../global-func';
 
-const ThemedTouchable = (props) => {
+const ThemedTouchable = props => {
   const {children, onPress, style} = props;
   const [disabled, setDisabled] = useState(false);
 
   const onHandlePress = () => {
-    if (disabled) return;
+    if (disabled) {
+      return;
+    }
 
     setDisabled(true);
     let idTimeOut = null;
     idTimeOut = setTimeout(() => {
       setDisabled(false);
     }, 500);
-    return () => idTimeOut && clearTimeout(idTimeOut);
-  
+
     onPress && onPress();
+
+    return () => idTimeOut && clearTimeout(idTimeOut);
   };
 
   return (

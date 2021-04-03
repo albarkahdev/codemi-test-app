@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import {
   UIButton,
   UIColumn,
@@ -6,9 +7,12 @@ import {
   UITypography,
 } from '../../ui';
 
-import React from 'react';
+const Login = ({loading, onLogin}) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-const Login = () => {
+  const onSubmit = () => onLogin({username, password});
+
   return (
     <UIContainer flex={1} justify="center" align="center">
       <UIColumn bot={20}>
@@ -22,18 +26,25 @@ const Login = () => {
       <UIColumn width="100%">
         <UITextInput
           bot={10}
-          placeholder="email"
+          placeholder="username"
           autoCapitalize="none"
-          keyboardType="email-address"
+          onChangeText={val => setUsername(val)}
+          value={username}
+          editable={!loading}
         />
         <UITextInput
           bot={16}
           placeholder="password"
           autoCapitalize="none"
           secureTextEntry
+          onChangeText={val => setPassword(val)}
+          value={password}
+          editable={!loading}
         />
         <UIButton
-          onPress={() => null}
+          onPress={onSubmit}
+          disabled={loading || !username || !password}
+          loading={loading}
           type="bold"
           title="Log in"
           width="100%"

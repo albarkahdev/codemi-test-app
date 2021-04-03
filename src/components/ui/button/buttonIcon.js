@@ -4,9 +4,9 @@ import {UIRow, UITouchable, UITypography} from '../';
 
 import PropTypes from 'prop-types';
 
-const ThemedButtonIcon = ({icon, title}) => {
+const ThemedButtonIcon = ({icon, title, onPress}) => {
   return (
-    <UITouchable>
+    <UITouchable onPress={onPress}>
       <UIRow width="100%" justify="center" align="center">
         <Image source={icon} style={styles.icon} />
         <UITypography title={title} left={5} bot={16} top={16} />

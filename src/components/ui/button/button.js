@@ -39,7 +39,7 @@ const ThemedButton = props => {
       activeOpacity={0.8}>
       <View style={[styles.contentButton, {height: height}]}>
         {loading ? (
-          <ActivityIndicator color={setColor('primary')} />
+          <ActivityIndicator color={setColor('white')} />
         ) : (
           <UITypography
             title={title}

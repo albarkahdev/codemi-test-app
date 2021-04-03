@@ -6,16 +6,15 @@ import {URL_GOOGLE_AP_QR_CODE} from '../../../constants/api';
 import {setColor} from '../../ui/global-func';
 import {width} from '../../../constants/dimensions';
 
-const QR = () => {
-  const name = 'andre.tara';
+const QR = ({username}) => {
   return (
     <UIColumn style={styles.container} justify="center" align="center">
       <Image
-        source={{uri: URL_GOOGLE_AP_QR_CODE + name}}
+        source={{uri: URL_GOOGLE_AP_QR_CODE + username}}
         style={styles.qrCode}
       />
       <UITypography
-        title={name}
+        title={username}
         size={30}
         lineHeight={30}
         type="bold"
